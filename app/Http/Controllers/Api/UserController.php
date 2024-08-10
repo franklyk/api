@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index(): JsonResponse
     {
-        $users = User::get();
+        $users = User::orderBy('id', 'DESC')->paginate(20);
 
         // Retornar os dados em formato objeto e status 200
         return response()->json([
