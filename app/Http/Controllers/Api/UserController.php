@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -16,9 +17,12 @@ class UserController extends Controller
      */
     public function index(): JsonResponse
     {
+        $users = User::get();
+
+        // Retornar os dados em formato objeto e status 200
         return response()->json([
             'status' => true,
-            'user' => 'Listar usuarios',
+            'users' => $users,
         ], 200);
     }
 }
