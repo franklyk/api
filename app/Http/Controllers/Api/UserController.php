@@ -25,4 +25,20 @@ class UserController extends Controller
             'users' => $users,
         ], 200);
     }
+
+    /**
+     * Recupera os dados de um usuário específico
+     *
+     * @param User $user O id para recuperar os dados do usuário
+     * @return \iluminate\http\JsonResponse Retorna os dados em formato json
+     */
+    public function show(User $user): JsonResponse 
+    {
+        // Retornar os dados em formato objeto e status 200
+        return response()->json([
+            'status' => true,
+            'users' => $user,
+        ], 200);
+        
+    }
 }
