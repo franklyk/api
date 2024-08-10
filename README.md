@@ -42,6 +42,22 @@ php artisan install:api
 Startar o projeto
 ```
 php artisan serve
+php artisan serve --host=localhost --port=3000
 ```
+Acessar a aplicação no navegador
+```
+http://127.0.0.1:8000/api/user
+```
+
+
+
+Startar o projeto 
+```
+php artisan serve --host=localhost --port=3000
+Acessar a aplicação no navegador
+```
+http://localhost:3000/api/user
+```
+
 
 
